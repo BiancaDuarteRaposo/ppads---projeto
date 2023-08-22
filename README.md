@@ -1,5 +1,6 @@
 # Projeto de PRATICA PROFISSIONAL EM ANALISE E DESENVOLVIMENTO DE SISTEMAS
-## Membros: 
+## Sistema Web de Gerenciamento de Eventos Happens Here
+### Membros: 
 ### BIANCA DUARTE RAPOSO
 ### JONATAS KOJI TAKINAMI
 ### KASSIO DOUGLAS RIBEIRO FERREIRA
