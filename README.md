@@ -2,6 +2,7 @@
 ## Sistema Web de Gerenciamento de Eventos Happens Here
 ### Membros: 
 ### BIANCA DUARTE RAPOSO
+### BRUNO ZANGIROLAMI
 ### JONATAS KOJI TAKINAMI
 ### KASSIO DOUGLAS RIBEIRO FERREIRA
 ### MURILO ALVES DA SILVA
