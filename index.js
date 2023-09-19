@@ -1,33 +1,39 @@
-const usuario = {
-  nome: string,
-  senha: string,
-};
+const apiUrl = "https://happens-here.onrender.com";
 
-let nomeFormulario;
-let emailFormulario;
-let botaoFormulario;
-
-nomeFormulario = document.querySelector(
-  "body > div > div > div > form > input:nth-child(1)"
+const formName = document.querySelector(
+  'input[name="name"]'
 );
-senhaFormulario = document.querySelector(
-  "body > div > div > div > form > input.text.senha"
+const formPassword = document.querySelector(
+  'input[name="password"]'
 );
-
-botaoFormulario = document.querySelector(
-  "body > div > div > div > form > input[type=submit]:nth-child(4)"
+const formEmail = document.querySelector(
+  'input[name="email"]'
+);
+const formButton = document.querySelector(
+  'input[type="submit"]'
 );
 
-let usuarioFormulario = {
-  nome: nomeFormulario.value,
-  email: emailFormulario.value,
-};
-
-botaoFormulario.addEventListener("click", function (event) {
+formButton.addEventListener("click", function (event) {
   event.preventDefault();
-  let usuarioFormulario = {
-    nome: nomeFormulario.value,
-    email: emailFormulario.value,
+  const userData = {
+    name: formName.value,
+    email: formEmail.value,
+    password: formPassword.value,
   };
-  console.log(usuarioFormulario);
+  const endpoint = apiUrl + '/user';
+  console.log(userData);
+  fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
+  })
+    .then(response => response.json())
+    .then(responseData => {
+      console.log('API Response:', responseData);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 });
