@@ -1,0 +1,10 @@
+.nav-icon {
+ color: white;
+}
+.btn-primary
+{
+    background-color:#5AE090 !important;
+    color: black !important;
+    border-color: #5AE090;
+    font-weight: 800;
+}
