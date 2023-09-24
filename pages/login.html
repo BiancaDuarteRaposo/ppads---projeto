@@ -23,22 +23,22 @@
       <div class="main-agileinfo">
         <div class="agileits-top">
           <form action="#" method="post">
-            <label for="formGroupExampleInput" class="form-label">Usuário</label>
-            <input class="text" type="text" name="name" required="" />
+            <label for="formGroupExampleInput" class="form-label">E-mail</label>
+            <input class="text email" type="email" name="email" required="true" />
             <br />
             <br />
             <label for="formGroupExampleInput" class="form-label">Senha</label>
-            <input class="text password" type="password" name="password" required="" />
+            <input class="text password" type="password" name="password" required="true" />
             <br />
             <p><a href="./forgotpassword.html">Esqueci a senha</a></p>
 
-            <input type="submit" value="LOGIN" />
+            <input id="iniciarSessaoButton" type="submit" value="LOGIN" />
           </form>
           <p> Já possui uma conta? <a href="../index.html"> Criar conta!</a></p>
         </div>
       </div>
     </div>
     <!-- //main -->
-    <script src="./index.js"></script>
+    <script src="./login.js"></script>
   </body>
 </html>

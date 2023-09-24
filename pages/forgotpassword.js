@@ -1,27 +1,23 @@
 const apiUrl = "https://happens-here.onrender.com";
 
-const formName = document.querySelector(
-  'input[name="name"]'
-);
 const formPassword = document.querySelector(
   'input[name="password"]'
 );
 const formEmail = document.querySelector(
   'input[name="email"]'
 );
-const criarContaButton = document.querySelector(
-  '#criarContaButton'
+const salvarSenhaButton = document.querySelector(
+  '#salvarSenhaButton'
 );
-
-criarContaButton.addEventListener("click", function (event) {
+/*Esse endpoint ainda não existe na API, então não tem como resetar a senha. */
+salvarSenhaButton.addEventListener("click", function (event) {
   event.preventDefault();
+  const endpoint = apiUrl + '/user/resetpassword';
   const userData = {
-    name: formName.value,
     email: formEmail.value,
     password: formPassword.value,
   };
-  const endpoint = apiUrl + '/user';
-  console.log(userData);
+  console.log('API Request:', userData);
   fetch(endpoint, {
     method: 'POST',
     headers: {
@@ -31,10 +27,11 @@ criarContaButton.addEventListener("click", function (event) {
   })
     .then(response => {
       if (response.status === 201) {
-        window.location.href = './pages/dashboard.html';
-      } else if (response.status === 400) {
-        alert('Conta já existe');
+        window.location.href = './login.html';
+      } else if (response.status === 401) {
+        alert('Qualquer erro condizente');
       } else {
+        // Display a friendly error message for other HTTP statuses
         alert('Erro: ' + response.statusText);
       }
     })
