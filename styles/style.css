@@ -9,6 +9,11 @@
     font-weight: 800;
 }
 
+.btn-secondary {
+    color: black !important;
+    font-weight: 800;
+}
+
 .fixed-div {
     height: 100%;
     position: fixed;
@@ -53,4 +58,37 @@ textarea {
 .buttons {
     text-align: right;
     margin-top: 20px;
+}
+
+
+.quadrado {
+    width: 90%;
+    height: 800px;
+    background-color: rgba(194, 194, 194, 0.5); /* Cor de fundo com transparência */
+    border: 1px solid #d7d7d7; /* Borda preta para destacar o quadrado */
+    border-radius: 5px;
+    margin: 0 auto;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+  }
+
+.pd {
+    padding: 2%;
+}
+
+.custom-input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0; 
+    border-bottom: 1px solid #ccc; 
+    background-color: transparent; 
+}
+
+.custom-input:focus {
+    box-shadow: none !important;
+    border-color: #ccc !important; 
+    background-color: rgba(255, 255, 255, 0);
 }
