@@ -1,0 +1,22 @@
+.mainContainer {
+  align-items: start;
+}
+.mainContainer header{
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  justify-content: space-between;
+  margin: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+h2, p {
+  display: inline;
+}
+.mainContainer .ticketSection {
+  margin-left: 45px;
+}
+.mainContainer .ticketSection ul {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Recuperar senha</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="application/x-javascript">
       addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
     </script>
     <!-- Custom Theme files -->
-    <link href="../index.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./styles/style.css" rel="stylesheet" type="text/css" media="all" />
     <!-- //Custom Theme files -->
     <!-- web font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Lobster&display=swap" rel="stylesheet">
     <!-- //web font -->
   </head>
-
   <body>
     <!-- main -->
     <div class="main-w3layouts wrapper">
-      <h1>Recuperar senha</h1>
+      <h1>Login</h1>
       <div class="main-agileinfo">
         <div class="agileits-top">
-          <form action="#" method="post">
-            <label for="formGroupExampleInput" class="form-label"
-              >Email</label
-            >
-            <input class="text" type="email" name="email" required="true" />
-            <br />
-            <br />
-            <label for="formGroupExampleInput" class="form-label"
-              >Nova senha</label
-            >
-            <input class="text password" type="password" name="password" required="true" />
-
-            <input id="salvarSenhaButton" type="submit" value="SALVAR" />
+          <form action="" method="post">
+            <label for="userEmail" class="form-label">E-mail</label>
+            <input id="userEmail" class="text email" type="email" name="email" required="true" />
+            <br>
+            <label for="userPass" class="form-label">Senha</label>
+            <input id="userPass" class="text password" type="password" name="password" required="true" />
+            <br>
+            <p>
+              <a href="./forgotpassword.html">Esqueci a senha</a>
+            </p>
+            <input id="loginButton" type="submit" value="LOGIN" />
           </form>
-          <p>
-            <a href="./login.html">Faça Login</a>
-          </p>
+          <p> Não possui uma conta? <a href="../user/signup.html"> Criar conta!</a></p>
         </div>
       </div>
     </div>
     <!-- //main -->
-    <script src="./forgotpassword.js"></script>
+    <script src="./scripts/login.js"></script>
   </body>
 </html>

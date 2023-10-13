@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /* base do rem */
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  /* Trocar a fonte depois se necessário */
+  font-family: 'Arbutus Slab', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  color: #333;
+  background-color: #ffffff;
+}
+h1 {
+font-weight: bold;
+font-size: 2.5rem;
+}
+h2 {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+h3 {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+h4, h5, h6 {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+strong {
+  font-size: 1.4rem;
+}
+p, span, div, input, button {
+  font-size: 1.4rem;
+}
+label {
+  font-size: 1.4rem;
+}
+ul, ol, dl {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+button {
+  color: white;
+  border: none;
+  padding: 10px 30px 10px 30px;
+  font-family: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+svg {
+  width: 30px;
+  height: 30px;
+}

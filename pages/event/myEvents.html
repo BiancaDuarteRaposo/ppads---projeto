@@ -6,30 +6,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./pages/styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="./pages/styles/globalStyles.css" />
-    <link rel="stylesheet" type="text/css" href="./pages/styles/asideGeneralStyle.css" />
-    <link rel="stylesheet" type="text/css" href="./pages/event/styles/mainPage.css" />
-    <title>Página inicial</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/globalStyles.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/asideGeneralStyle.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/myEvents.css" />
+    <title>Meus eventos</title>
   </head>
   <body>
       <aside id="asideTag" class="navContainer">
         <nav>
           <header>
-            <a href="./index.html"><img src="../../../assets/happenshereLogo.png" alt="Happens Here Logo"></a>
+            <a href="../../index.html"><img src="../../../assets/happenshereLogo.png" alt="Happens Here Logo"></a>
           </header>
           <ul>
             <li>
               <svg viewBox="0 0 25 30">
                 <path d="M24.3056 0L24.0833 0.0515136L16.6667 3.60596L8.33333 0L0.5 3.26253C0.208333 3.38273 0 3.69181 0 4.08675V30.0496C0 30.5304 0.305556 30.9082 0.694444 30.9082L0.916667 30.8567L8.33333 27.3022L16.6667 30.9082L24.5 27.6457C24.7917 27.5255 25 27.2164 25 26.8215V0.858561C25 0.377767 24.6944 0 24.3056 0ZM16.6667 27.474L8.33333 23.8508V3.43424L16.6667 7.05737V27.474Z" fill="white"></path>
               </svg>
-              <a href="./index.html">EXPLORAR</a>
+              <a href="../../index.html">EXPLORAR</a>
             </li>
             <li>
               <svg viewBox="0 0 25 30">
                 <path d="M22.2222 3.43424H19.4444V0H5.55556V3.43424H2.77778C1.25 3.43424 0 4.97965 0 6.86849V8.58561C0 12.9643 2.66667 16.5359 6.09722 17.0682C6.97222 19.6439 8.84722 21.5842 11.1111 22.1509V27.474H5.55556V30.9082H19.4444V27.474H13.8889V22.1509C16.1528 21.5842 18.0278 19.6439 18.9028 17.0682C22.3333 16.5359 25 12.9643 25 8.58561V6.86849C25 4.97965 23.75 3.43424 22.2222 3.43424ZM2.77778 8.58561V6.86849H5.55556V13.4279C3.94444 12.7067 2.77778 10.8179 2.77778 8.58561ZM22.2222 8.58561C22.2222 10.8179 21.0556 12.7067 19.4444 13.4279V6.86849H22.2222V8.58561Z" fill="white"></path>
               </svg>
-              <a href="./pages/event/myEvents.html">MEUS EVENTOS</a>
+              <a href="./myEvents.html">MEUS EVENTOS</a>
             </li>
             <li>
               <svg viewBox="0 0 30 30" >
@@ -41,7 +41,7 @@
               <svg viewBox="0 0 25 30" >
                 <path d="M12.5 0C5.6 0 0 6.92344 0 15.4541C0 23.9848 5.6 30.9082 12.5 30.9082C19.4 30.9082 25 23.9848 25 15.4541C25 6.92344 19.4 0 12.5 0ZM12.5 4.63623C14.575 4.63623 16.25 6.70708 16.25 9.27246C16.25 11.8378 14.575 13.9087 12.5 13.9087C10.425 13.9087 8.75 11.8378 8.75 9.27246C8.75 6.70708 10.425 4.63623 12.5 4.63623ZM12.5 26.5811C9.375 26.5811 6.6125 24.6029 5 21.6048C5.0375 18.5295 10 16.845 12.5 16.845C14.9875 16.845 19.9625 18.5295 20 21.6048C18.3875 24.6029 15.625 26.5811 12.5 26.5811Z" fill="white"></path>
               </svg>
-              <a href="./pages/user/perfil.html">PERFIL</a>
+              <a href="../user/perfil.html">PERFIL</a>
             </li>
           </ul>
           <button class="logoutButton" onclick="redefineToken()">SAIR</button>
@@ -50,20 +50,9 @@
       <aside id="toggleAside" class="toggleAside">
         >
       </aside>
-      <div class="mainContainer">
-        <header>
-          <h1>EVENTOS DISPONÍVEIS</h1>
-          <div class="searchInput">
-            <input id="quickSearch" type="text" placeholder="BUSCA RÁPIDA" />
-            <svg fill="#777">
-              <path d="M17.8674 19.4391H16.7381L16.3379 18.962C17.7387 16.9474 18.582 14.3319 18.582 11.4868C18.582 5.14253 14.4225 0 9.29102 0C4.15952 0 0 5.14253 0 11.4868C0 17.831 4.15952 22.9735 9.29102 22.9735C11.5923 22.9735 13.7078 21.9309 15.3373 20.199L15.7233 20.6938V22.0899L22.8702 30.9082L25 28.2751L17.8674 19.4391ZM9.29102 19.4391C5.73185 19.4391 2.85878 15.8871 2.85878 11.4868C2.85878 7.08644 5.73185 3.53439 9.29102 3.53439C12.8502 3.53439 15.7233 7.08644 15.7233 11.4868C15.7233 15.8871 12.8502 19.4391 9.29102 19.4391Z" fill="#cecece"></path>
-            </svg>
-          </div>
-        </header>
-        <section id="eventRoot">
-        </section>
-      </div>
-    <script src="./pages/event/scripts/mainPage.js"></script>
-    <script src="./pages/user/scripts/utils.js"></script>
+      <section id="eventRoot" class="mainContainer">
+      </section>
+      <script src="./scripts/myEvents.js"></script>
+      <script src="../user/scripts/utils.js"></script>
   </body>
 </html>

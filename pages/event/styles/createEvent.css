@@ -1,0 +1,35 @@
+button {
+  background-color: #002510;
+  border-radius: 10px;
+  margin: 30px;
+}
+.mainContainer h1 {
+  margin-top: 15px;
+}
+.mainContainer form {
+  width: 100%;
+  max-width: 800px;
+}
+.mainContainer form div{
+  margin: 30px;
+}
+.eventSelectContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.eventSelect {
+  padding: 5px;
+  font-size: 1.4rem;
+  color: #333;
+  width: 200px; /* Defina a largura desejada */
+  cursor: pointer;
+}
+.eventSelect option {
+  font-size: 1.6rem;
+  color: #333;
+}
+.formButton {
+  display: flex;
+  justify-content: center;
+}

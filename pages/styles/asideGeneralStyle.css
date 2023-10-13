@@ -1,0 +1,67 @@
+.navContainer {
+  width: 210px;
+  height: 100%;
+}
+.toggleAside {
+  background-color: #00251080;
+  color: #bcffd2;
+  position: fixed;
+  font-size: 50px;
+  border-radius: 300px;
+  padding: 5px 25px;
+  text-align: center;
+  bottom: 0px;
+  left: 50px;
+  margin: 15px;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+.navContainer nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #002510;
+  height: 100vh;
+  z-index: 100;
+}
+.navContainer nav .logoutButton {
+  margin-top: 30px;
+  background-color: transparent;
+  justify-self: end;
+}
+.navContainer header img {
+  width: 100%;
+  height: 200px;
+}
+ul li {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+ul li svg {
+  margin-right: 5px;
+}
+.mainContainer {
+  background-color: #FFFFFF;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23073202' stroke-width='66.7' stroke-opacity='0.02' %3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fdfffd' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23fcfffc' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23fafffa' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23f9fff8' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23f7fff7' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23f6fff5' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23f4fff3' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23f2fff2' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23f1fff0' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23efffef' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23eeffed' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23ecffeb' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23eaffea' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23e9ffe8' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23e7ffe6' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23e6ffe5' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23E4FFE3' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+@media (max-width: 768px) {
+  .navContainer {
+    background-color: #002510;
+    width: 210px;
+    position: absolute;
+    display: none;
+  }
+  .toggleAside {
+    display: block;
+  }
+}

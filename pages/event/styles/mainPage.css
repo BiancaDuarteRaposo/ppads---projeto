@@ -1,0 +1,47 @@
+.mainContainer header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #fafafa;
+  border-radius: 0px 0px 30px 30px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 5px;
+  max-width: 768px;
+}
+.mainContainer header .searchInput {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+}
+.mainContainer #eventRoot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mainContainer #eventRoot .eventCard {
+  height: 300px;
+  max-width: 300px;
+  width: 100%;
+  min-width: 20px;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-color: #fafafa;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  overflow: hidden;
+  margin: 10px;
+  cursor: pointer;
+  color: #333;
+}
+.mainContainer #eventRoot .eventCard .info {
+  background-color: #fafafa;
+  padding: 10px;
+}
