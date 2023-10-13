@@ -14,7 +14,6 @@ margin-top: 30px;
 .mainContainer section {
   display: flex;
   width: 100%;
-  height: 100%;
   justify-content: center;
 }
 .mainContainer section ul {

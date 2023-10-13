@@ -90,7 +90,9 @@ submitEventForm.addEventListener('click', async (event) => {
       body: JSON.stringify(eventData)
     })
     const data = await response.json()
-
+    if (data.statusCode === 201) {
+      alert('Evento criado')
+    }
   } catch (error) {
     console.error(error)
   }

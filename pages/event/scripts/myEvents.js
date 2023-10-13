@@ -33,16 +33,6 @@ const main = async () => {
       <img src="${val.poster}"></img>
       <a href="./editEvent.html?id=${val.id}"><button>Editar evento</button></a>
     </li>
-    <li>
-      <h1>${val.title}</h1>
-      <img src="${val.poster}"></img>
-      <a href="./editEvent.html?id=${val.id}"><button>Editar evento</button></a>
-    </li>
-    <li>
-      <h1>${val.title}</h1>
-      <img src="${val.poster}"></img>
-      <a href="./editEvent.html?id=${val.id}"><button>Editar evento</button></a>
-    </li>
     `
   })
   const content = `
