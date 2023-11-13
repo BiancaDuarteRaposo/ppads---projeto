@@ -19,4 +19,41 @@ h2, p {
 .mainContainer .ticketSection ul {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.mainContainer .ticketSection ul li  {
+  max-width: 350px;
+  width: 100%;
+}
+.mainContainer .ticketSection ul li a {
+  width: 100%;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-color: #fafafa;
+  padding: 30px;
+  border-radius: 15px;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainContainer .ticketSection ul li h3 {
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,.33) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,.33) 100%);
+}
+.mainContainer .ticketSection ul li img{
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px black;
+  width: 100%;
+  max-width: 200px;
 }

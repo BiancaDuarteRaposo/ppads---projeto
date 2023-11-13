@@ -62,7 +62,6 @@ submitEventForm.addEventListener('click', async (event) => {
     alert('Estado e/ou cidade inválido')
     return
   }
-  console.log(thisInput['data-value'])
   const eventData = {
     title: eventForm.elements['eventTitle'].value,
     remainingTickets: +eventForm.elements['eventTicket'].value,
@@ -79,7 +78,6 @@ submitEventForm.addEventListener('click', async (event) => {
     }
     
   };
-  console.log('API Request:', eventData);
   try {
     const response = await fetch(endpoint, {
       method: 'POST',

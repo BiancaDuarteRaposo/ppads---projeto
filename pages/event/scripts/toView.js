@@ -14,7 +14,6 @@ const requestData = async (id) => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json()
-    // Se der esse erro é pq a api ta offline 
     if (data.statusCode === 404) {
       throw new Error('Esse evento não existe no banco de dados.')
     }
@@ -26,13 +25,16 @@ const requestData = async (id) => {
 
 const main = async (id) => {
   const val = await requestData(id)
-  console.log(val.body.body)
   const content = `
   <header class="eventHeader">
     <h1>${val.body.title}</h1>
     <span>autor do evento: ${val.body.author.name}</span>
     <img src=${val.body.poster} />
-    <button class="buyTicket" onclick="createQRCode()">ADQUIRIR INGRESSO</button>
+    ${
+      new Date(val.body.eventFinishAt).getTime() > new Date(Date.now()).getTime()
+      ? '<button class="buyTicket" onclick="createQRCode()">ADQUIRIR INGRESSO</button>'
+      : '<button class="buyTicket" onclick="alert(`Evento já realizado, portanto não será possível adquirir um ingresso.`)">ADQUIRIR INGRESSO</button>'
+    }
   </header>
   <section class="eventDescription">
     <h2>Descrição do evento</h2>
@@ -85,7 +87,6 @@ const main = async (id) => {
 }
 
 const createQRCode = async () => {
-  
   const response = await fetch('https://happens-here.onrender.com/ticket/generate', {
     method: 'POST',
     headers: {
@@ -99,10 +100,11 @@ const createQRCode = async () => {
     alert('Seu QRCode de acesso ao evento foi criado, confira o seu perfil para visualiza-lo.')
   }
   if(data.statusCode===400){
-    alert('body inválido')
+    alert('ingressos esgotados e/ou body inválido')
   }
   if(data.statusCode===401){
     alert('Você precisa estar logado para adquirir um ingresso.')
+    window.location.href = '../user/login.html'
   }
   if(data.statusCode===404){
     alert('Evento não encontrado')

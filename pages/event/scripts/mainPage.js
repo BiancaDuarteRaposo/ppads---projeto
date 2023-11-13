@@ -25,8 +25,6 @@ const main = async (filt) => {
   if (res === null)
     res = await requestData();
   const filteredData = res.body.filter((val) => {
-    console.log(val.title.toLowerCase().includes(filt))
-    
     return filt
     ? val.title.toLowerCase().includes(filt.toLowerCase()) 
     || val.address.city.name.toLowerCase().includes(filt.toLowerCase()) 

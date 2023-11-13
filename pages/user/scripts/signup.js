@@ -18,7 +18,6 @@ criarContaButton.addEventListener('click', function (event) {
     password: userPass.value,
   };
   const endpoint = apiUrl + '/user';
-  console.log(userData);
   fetch(endpoint, {
     method: 'POST',
     headers: {
@@ -33,6 +32,10 @@ criarContaButton.addEventListener('click', function (event) {
         window.location.href = './login.html';
       } else {
         let writeInAlert = ''
+        if(data.message.length === 19) {
+          alert(`${data.message}`)
+          return
+        }
         for (let c = 0; c < data.message.length; c++) {
           writeInAlert+=data.message[c]+'\n'
         }

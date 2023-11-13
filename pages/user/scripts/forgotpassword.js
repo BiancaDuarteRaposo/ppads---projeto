@@ -17,7 +17,6 @@ salvarSenhaButton.addEventListener("click", function (event) {
     email: formEmail.value,
     password: formPassword.value,
   };
-  console.log('API Request:', userData);
   fetch(endpoint, {
     method: 'POST',
     headers: {

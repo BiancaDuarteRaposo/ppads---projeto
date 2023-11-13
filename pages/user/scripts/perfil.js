@@ -13,7 +13,6 @@ const requestData = async () => {
     alert('Você deve estar logado para ver seu perfil.')
     window.location.href = './login.html'
   }
-  console.log(data)
   return data
 }
 
@@ -23,8 +22,10 @@ const main = async () => {
   user.body.tickets.forEach((val) => {
     tickets += `
     <li>
-      <h3>${val.event.title}</h3>
-      <img src="${val.qrCode}">
+      <a href="../event/toView.html?id=${val.event.id}" style="background-image: url(${val.event.poster});">
+        <h3>${val.event.title}</h3>
+        <img src="${val.qrCode}">
+      </a>
     </li>
     `
   })
@@ -39,7 +40,7 @@ const main = async () => {
     </header>
     <section class="ticketSection">
       <h1>Meus ingressos</h1>
-      ${user.body.tickets.length ? `<ul>${tickets}</ul>` : '<br/><p>Você não possui ingressos disponíveis.</p>'}
+      ${user.body.tickets.length ? `<ul>${tickets}</ul>` : '<br /><p>Você não possui ingressos disponíveis.</p>'}
     </section>
   `
   userRoot.innerHTML = content

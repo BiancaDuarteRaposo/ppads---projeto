@@ -11,7 +11,6 @@ loginButton.addEventListener('click', function (event) {
     email: userEmail.value,
     password: userPass.value,
   };
-  console.log('API Request:', userData);
   fetch(endpoint, {
     method: 'POST',
     headers: {
@@ -23,17 +22,15 @@ loginButton.addEventListener('click', function (event) {
       const data = await response.json()
       if (data.statusCode === 200) {
         alert('Login realizado.')
-        console.log(data)
-        localStorage.setItem('bearerToken',data.body.token)
+        localStorage.setItem('bearerToken', data.body.token)
         window.location.href = '../../../index.html';
+      } else if (data.statusCode === 401) {
+        alert('Email ou senha inválidos.')
       } else {
         let writeInAlert = ''
         data.message.forEach((val) => {
           writeInAlert += val+'\n'
         })
-        /* for (let c = 0; c < data.message.length; c++) {
-          writeInAlert+=data.message[c]+'\n'
-        } */
         alert(writeInAlert)
       }
     })
