@@ -8,7 +8,6 @@
   max-width: 800px;
   width: 100%;
   max-height: 400px;
-  height: 100%;
   margin: 15px;
   border-radius: 10px;
 }
@@ -31,6 +30,7 @@
 .eventDescription p {
   margin-top: 10px;
   text-indent: 30px;
+  overflow-wrap: break-word;
 }
 .eventInformations {
   display: flex;
